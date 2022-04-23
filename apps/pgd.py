@@ -2,7 +2,7 @@ import streamlit as st
 import tensorflow as tf
 import PIL.Image as Image
 
-def app():
+def app(mdl):
     st.set_option('deprecation.showfileUploaderEncoding', False)
 
     @st.cache(allow_output_mutation=True)

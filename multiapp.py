@@ -15,4 +15,7 @@ class MultiApp:
             'Attack types',
             self.apps,
             format_func=lambda app: app['title'])
-        app['function']()
+        modelName = st.sidebar.selectbox(
+        'Select Model',
+        ('MobileNetV2', 'ResNet50', 'VGG16'))
+        app['function'](modelName)
